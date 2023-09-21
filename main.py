@@ -1,18 +1,21 @@
-from my_modules.rovarspraket import Rovarspraket
+from my_modules import rovarspraket_function
+from my_modules.rovarspraket_function import Rovarspraket
+from my_modules.fetch_from_github import FetchFileFromGitHub
+
+github_link = "https://github.com/AIDEV23S/svText"
+file_name = "svenskt_text.txt"
+imported_text_content = FetchFileFromGitHub(github_link, file_name)
+
+rovarspraket = Rovarspraket(imported_text_content)
 
 
 def main():
     try:
-        # Test #
-        text1 = "Det här är ett test! Faail ÿ ÿ ÿ ÿ ÿ "
-        text2 = "Det här är ett test! Detta borde lyckas"
-        rovar = Rovarspraket(text2)
-        invalid_chars = rovar.find_invalid_characters()
-
+        invalid_chars = rovarspraket.find_invalid_characters()
         if invalid_chars:
-            print(rovar.print_invalid_characters())
+            print(rovarspraket.print_invalid_characters())
         else:
-            translated_text = rovar.translate_to_rovarspraket()
+            translated_text = rovarspraket.translate_to_rovarspraket()
             print("Översatt text:")
             print(translated_text)
 
