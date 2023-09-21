@@ -1,3 +1,3 @@
-# Aydas Sholani
+# Ayda Sholani
 
-> Inlämningsuppgift 1
+## Inlämningsuppgift 1
