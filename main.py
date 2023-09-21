@@ -1,4 +1,3 @@
-from my_modules import rovarspraket_function
 from my_modules.rovarspraket_function import Rovarspraket
 from my_modules.fetch_from_github import FetchFileFromGitHub
 
