@@ -1,11 +1,11 @@
 import os
 
 
-def YesOrNo(prompt_message):
+def AskUserYesOrNo(prompt_message):
     while True:
         try:
             ask_user = input(prompt_message).strip().lower()[0]
-            if ask_user in ["y", "j"]:
+            if ask_user in ["y", "j", "y"]:
                 return True
             elif ask_user in ["n"]:
                 return False
