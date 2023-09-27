@@ -19,7 +19,7 @@ class FileManager:
         except Exception as e:
             print(f"Ett fel inträffade: {str(e)}")
 
-    # Funktion för att skriva filer. 'wb' skriver över filen och forma
+    # Funktion för att skriva filer
     def write_file(self, file_path, file_content):
         try:
             with open(file_path, "wb") as file:
