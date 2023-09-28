@@ -26,7 +26,6 @@ def main():
         else:
             # Översätta texten till rövarspråket
             translated_text = translator.translate_to_rovarspraket()
-            print(translated_text)
 
             # Fråga om användaren vill spara översättningen i den här mappen
             translated_file_path = file_manager.input_local_file_path(
@@ -43,6 +42,7 @@ def main():
 
             # Om ja, skriv ut texten från filen
             if ask_to_read:
+                print("Innehåll i den översatta filen:")
                 print(file_manager.read_file(translated_file_path))
 
     except Exception as e:
