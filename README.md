@@ -30,7 +30,7 @@ Din organisation behöver en säker metod för att skicka textfiler till kundern
 - **conda**:
 
 ```bash
-§ conda create --name <myenv> python=3.9
+§ conda create --name <myenv> python=<pythonversion>
 § conda activate <myenv>
 ```
 
