@@ -30,5 +30,4 @@ class EncryptedEmailHandler:
                 result += f"{c}o{c.lower()}"
             else:
                 result += c
-        print(result)
         return result
