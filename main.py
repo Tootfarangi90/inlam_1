@@ -1,7 +1,7 @@
 from my_modules.ask_user import AskUserYesOrNo
 from my_modules.encrypted_email_handler import EncryptedEmailHandler
 from my_modules.github_file_manager import GitHubFileManager
-from my_modules.local_file_manager import FileManager
+from my_modules.file_manager import FileManager
 
 
 def main():
