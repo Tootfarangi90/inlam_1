@@ -3,7 +3,6 @@ from .ask_user import AskUserYesOrNo
 
 
 # En class för att hantera filer
-# När man använder with så stängs filen automatisk efter att man har hanterat den
 class FileManager:
     # Fråga användaren om sökväg där filen ska sparas
     def input_local_file_path(self, prompt_message):
