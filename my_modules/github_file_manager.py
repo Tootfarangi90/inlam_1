@@ -27,7 +27,6 @@ class GitHubFileManager:
 
             if res.status_code == 200:
                 file_content = res.text
-                print(file_content)
                 return file_content
             else:
                 print(f"Det gick inte att hämta filen. Statuskod: {res.status_code}")
