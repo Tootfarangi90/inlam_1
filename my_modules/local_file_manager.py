@@ -2,12 +2,16 @@ import os
 from .ask_user import AskUserYesOrNo
 
 
+# En class för att hantera filer
+# När man använder with så stängs filen automatisk efter att man har hanterat den
 class FileManager:
-    # Fråga användaren om path till filen
+    # Fråga användaren om sökväg där filen ska sparas
     def input_local_file_path(self, prompt_message):
         try:
             full_path = ""
+            # Om 'AskUserYesOrNo' returnerar True,
             if AskUserYesOrNo(prompt_message):
+                # Använd nuvarande mapp som bas för att spara filen
                 current_directory = os.getcwd()
                 path_input = input("Ange filnamn: ")
                 full_path = os.path.join(current_directory, path_input)
@@ -19,7 +23,7 @@ class FileManager:
         except Exception as e:
             print(f"Ett fel inträffade: {str(e)}")
 
-    # Funktion för att skriva filer
+    # Funktion för att skriva innehåll till en fil
     def write_file(self, file_path, file_content):
         try:
             with open(file_path, "wb") as file:
@@ -28,7 +32,7 @@ class FileManager:
         except Exception as e:
             print(f"Ett fel inträffade: {str(e)}")
 
-    # Funktion för att läsa filer
+    # Funktion för att läsa innehållet från en fil
     def read_file(self, file_path):
         try:
             if os.path.exists(file_path):
